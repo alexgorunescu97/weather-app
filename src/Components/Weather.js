@@ -18,7 +18,7 @@ class Weather extends React.Component {
                 </p>
                 }
                 {
-                this.props.icon && <img id="icon" src={iconUrl}/>
+                this.props.icon && <img alt='' id="icon" src={iconUrl}/>
                 }
                 {
                 this.props.temperature && <p>Temperature: 

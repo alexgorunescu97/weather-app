@@ -38,7 +38,7 @@ class App extends React.Component {
         let city = this.state.inputCity;
         let country = this.state.inputCountry;
         try {
-            let weatherCall = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${KEY}&units=metric`);
+            let weatherCall = await fetch(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${KEY}&units=metric`);
             if (!weatherCall.ok) {
                 throw new Error('Please enter a valid location!');
             } else {
