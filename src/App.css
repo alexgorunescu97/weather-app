@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+* {
+box-sizing: border-box;
+font-family: 'Baloo 2', cursive;
+margin: 0;
+padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: linear-gradient(to right, rgb(133, 93, 133), rgb(99, 31, 99));
+    background-size: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html, body, #root {
+    height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#app {
+    height: 90vh;
 }
 
-.App-link {
-  color: #61dafb;
+#app {
+    background-color: rgb(40, 112, 112);
+    margin: 2% 15%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+h1 {
+    font-size: 4vw;
+}
+
+#title p{
+    font-size: 2.2vw;
+    font-style: italic;
+}
+
+#form-weather {
+    width: 60%;
+    height: 100%
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin-top: 10%;
+}
+
+#form-comp {
+    height: 10%;
+}
+
+input[type="text"] {
+    border: 0px;
+    border-bottom: rgb(99, 31, 99) 2px solid;
+    background-color: transparent;
+    width: 30%;
+    height: 50%;
+    outline: none;
+    font-size: 1.3vw;
+    color: white;
+}
+
+input::placeholder {
+    color: white
+}
+
+button {
+    height: 60%;
+    width: 20%;
+    border: 0;
+    border-radius: 5%;
+    color: white;
+    background-color: rgb(99, 31, 99);
+    cursor: pointer;
+    font-size: 1.2vw;
+}
+
+#weather-comp {
+    padding: 5% 15% 15% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#icon {
+    width: 40%;
+    height: 40%;
+}
+
+p span {
+    font-weight: bold;
+    color: white;
+}
+
+#weather-comp p {
+    color: rgb(99, 31, 99);
+    font-size: 1.8vw;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+@media (max-width: 1300px) {
+    #weather-comp {
+        padding: 5% 0%;
+        height: 90vh;
+    }
+
+    input[type="text"] {
+        width: 30%;
+        height: 33%;
+        font-size: 1.6vw;
+    }
+}
+
+@media (max-width: 800px) {
+    #app {
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #title {
+        border-radius: 0;
+    }
+
+    input[type="text"] {
+        width: 30%;
+        height: 30%;
+        font-size: 2.4vw;
+    }
+
+    button {
+        height: 40%;
+        width: 30%;
+        border: 0;
+        border-radius: 5%;
+        background-color: rgb(99, 31, 99);
+        cursor: pointer;
+        font-size: 2.2vw;
+    }
+
+    #weather-comp {
+        padding: 25% 0%;
+        height: 80vh;
+    }
+
+    #icon {
+        width: 40%;
+        height: 40%;
+    }
+
+    #weather-comp p {
+        font-size: 4vw;
+        padding-bottom: 0%;
+    }
+
+    h1 {
+        font-size: 6vw;
+    }
+    
+    #title p{
+        font-size: 3vw;
+    }
+
+        
+
 }
