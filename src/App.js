@@ -43,7 +43,6 @@ class App extends React.Component {
                 throw new Error('Please enter a valid location!');
             } else {
                 let weatherInfo = await weatherCall.json();
-                console.log(weatherInfo);
                 this.setState({
                     inputCity: "",
                     inputCountry: "",

@@ -4,7 +4,7 @@ import React from "react";
 class Weather extends React.Component {
 
     render() {
-        let iconUrl = `https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/wn/${this.props.icon}@2x.png`;
+        let iconUrl = `http://openweathermap.org/img/wn/${this.props.icon}@2x.png`;
         return (
             <div id="weather-comp">
                 {
